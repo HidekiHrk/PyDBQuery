@@ -1,6 +1,6 @@
 # PyDBQuery
 A simple database query for python!<br><br>
-![](https://img.shields.io/github/release/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/issues/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/forks/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/stars/HidekiHrk/PyDBQuery.svg)	![](https://img.shields.io/github/license/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/pypi/pyversions/PyDBQuery.svg)<br>
+![](https://img.shields.io/github/release/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/issues/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/forks/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/stars/HidekiHrk/PyDBQuery.svg)	![](https://img.shields.io/github/license/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/pypi/pyversions/PyDBQuery.svg) ![](https://img.shields.io/github/last-commit/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/downloads/HidekiHrk/PyDBQuery/latest/total.svg) ![](https://img.shields.io/github/languages/code-size/HidekiHrk/PyDBQuery.svg)<br>
 
 **Install:**
 ```
