@@ -1,5 +1,6 @@
 # PyDBQuery
-A simple database query for python!
+![](https://img.shields.io/github/release/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/issues/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/forks/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/stars/HidekiHrk/PyDBQuery.svg)	https://img.shields.io/github/license/HidekiHrk/PyDBQuery.svg
+<br>A simple database query for python!
 
 **Examples:**<br>
 **Sqlite3:**<br>
