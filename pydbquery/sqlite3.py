@@ -13,7 +13,8 @@ class Database:
         self.tables = []
 
     class Table:
-        def __init__(self, name, db, **kwargs):
+        def __init__(self, table_name, db, **kwargs):
+            name = table_name
             kwargs['id'] = int
             column_class = namedtuple("Column", "name type")
             if type(name) != str:
@@ -35,16 +36,25 @@ class Database:
                 for x in kwargs:
                     type_transform = lambda x: x if type(x) != str else f'"{x}"'
                     exec(f"self.{x} = {type_transform(kwargs.get(x))}")
-            
+
             def save(self):
                 sdict = self.__dict__
-                querystr = ', '.join(map(lambda x: f"{x} = ?", filter(lambda z: z.lower() != 'id', sdict)))
-                self._table.c.execute(f"UPDATE {self._table.name} SET {querystr} WHERE id = ?", (*sdict.values(),))
+                self_id = sdict['id']
+                sdict = dict(map(lambda x: [x, sdict.get(x)],
+                    filter(lambda z: z.lower() not in ['id', '_table'], sdict)))
+                querystr = ', '.join(map(lambda x: f"{x} = ?", sdict))
+                self._table.c.execute(f"UPDATE {self._table.name} SET {querystr} WHERE id = ?", (*sdict.values(), self_id))
                 self._table.conn.commit()
+                return self
             
             def delete(self):
                 self._table.c.execute(f"DELETE FROM {self._table.name} WHERE id = ?", (self.__dict__['id'],))
                 self._table.conn.commit()
+
+        def Query(self, **kwargs):
+            qry_obj = self.QueryObject(self, **kwargs)
+            return qry_obj
+            #return namedtuple("QueryObj", f"save delete {' '.join(kwargs)}")(qry_obj.save, qry_obj.delete, **kwargs)
 
         def all(self):
             cols_str = list(map(lambda x: x.name, self.cols))
@@ -56,7 +66,7 @@ class Database:
                 for z in range(len(x)):
                     dct[cols_str[z]] = x[z]
                 query_dicts.append(dct)
-            query_list = list(map(lambda x: self.QueryObject(self, **x), query_dicts))
+            query_list = list(map(lambda x: self.Query(**x), query_dicts))
             def fil(**kwargs):
                 cols = list(cols_str)
                 if not all(x in cols for x in kwargs):
@@ -88,6 +98,7 @@ class Database:
                 (*kwargs.values(),)
             )
             self.conn.commit()
+            return self.Query(**kwargs)
 
         def __eq__(self, other):
             if type(other) == type(self):
@@ -99,8 +110,8 @@ class Database:
             self.conn.commit()
             self.db.tables = list(filter(lambda x: x != self, self.db.tables))
 
-    def create_table(self, name, **kwargs):
-        tbl = self.Table(name, self, **kwargs)
+    def create_table(self, table_name, **kwargs):
+        tbl = self.Table(table_name, self, **kwargs)
         self.tables.append(tbl)
         return tbl
 

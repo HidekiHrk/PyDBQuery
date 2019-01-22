@@ -3,7 +3,7 @@ setup(
   name='PyDBQuery',
   packages = ['pydbquery'],
   version = '0.1dev',
-  license='GPL-3.0',
+  license='MIT',
   description = 'Functional query selector for databases.',
   author = 'HidekiHrk',
   author_email = 'hidekihiroki123@gmail.com',
