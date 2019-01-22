@@ -1,6 +1,6 @@
 # PyDBQuery
 A simple database query for python!<br><br>
-![](https://img.shields.io/github/release/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/issues/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/forks/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/stars/HidekiHrk/PyDBQuery.svg)	![](https://img.shields.io/github/license/HidekiHrk/PyDBQuery.svg)<br>
+![](https://img.shields.io/github/release/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/issues/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/forks/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/github/stars/HidekiHrk/PyDBQuery.svg)	![](https://img.shields.io/github/license/HidekiHrk/PyDBQuery.svg) ![](https://img.shields.io/pypi/pyversions/PyDBQuery.svg)<br>
 
 **Install:**
 ```
