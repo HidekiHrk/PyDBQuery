@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name='PyDBQuery',
   packages = ['pydbquery'],
-  version = '0.1dev',
+  version = '0.1',
   license='MIT',
   description = 'Functional query selector for databases.',
   author = 'HidekiHrk',
   author_email = 'hidekihiroki123@gmail.com',
   url = 'https://github.com/HidekiHrk/PyDBQuery',
-  download_url = 'https://github.com/HidekiHrk/PyDBQuery/archive/v_0.1dev.tar.gz',
+  download_url = 'https://github.com/HidekiHrk/PyDBQuery/archive/v_0.1.tar.gz',
   keywords = ['python', 'db', 'database', 'better', 'query'],
   install_requires=[],
   classifiers=[
