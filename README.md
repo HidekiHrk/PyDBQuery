@@ -4,11 +4,13 @@ A simple database query for python!<br><br>
 <br>
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/F2F7P50M)
 
-**Install:**
-```python
-# for the stable ver (recommended)
+**Install:**<br>
+_For the stable ver (recommended):_
+```
 pip install PyDBQuery
-# for the dev ver
+```
+_For the dev ver:_
+```
 pip install PyDBQuery==0.2dev
 ```
 
