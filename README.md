@@ -5,7 +5,7 @@ A simple database query for python!<br><br>
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/F2F7P50M)
 
 **Install:**
-```md
+```python
 # for the stable ver (recommended)
 pip install PyDBQuery
 # for the dev ver
