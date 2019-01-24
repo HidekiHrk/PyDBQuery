@@ -28,5 +28,7 @@ if len(jhonny) > 0:
   jhonny.save()
   print(jhonny.age)
 ```
+**Supported DataTypes (including data inside list-like datatypes):** _int, float, str, dict, set, list, tuple_<br>
+
 **An portuguese example: click [heeeeereeeee](https://gist.github.com/HidekiHrk/c438a95d757d99b75c72b140da1e3450)!**<br>
 For more informations please visit the [docs](https://pydbquery.readthedocs.io/en/latest/)!
